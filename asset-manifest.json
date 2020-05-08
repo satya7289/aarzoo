@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/aarzoo/static/css/main.5f361e03.chunk.css",
+    "main.js": "/aarzoo/static/js/main.36f81733.chunk.js",
+    "main.js.map": "/aarzoo/static/js/main.36f81733.chunk.js.map",
+    "runtime-main.js": "/aarzoo/static/js/runtime-main.e25739fe.js",
+    "runtime-main.js.map": "/aarzoo/static/js/runtime-main.e25739fe.js.map",
+    "static/js/2.b701e161.chunk.js": "/aarzoo/static/js/2.b701e161.chunk.js",
+    "static/js/2.b701e161.chunk.js.map": "/aarzoo/static/js/2.b701e161.chunk.js.map",
+    "index.html": "/aarzoo/index.html",
+    "precache-manifest.f58154919d06fc6d6923e41f030a274c.js": "/aarzoo/precache-manifest.f58154919d06fc6d6923e41f030a274c.js",
+    "service-worker.js": "/aarzoo/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/aarzoo/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.b701e161.chunk.js.LICENSE.txt": "/aarzoo/static/js/2.b701e161.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/aarzoo/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e25739fe.js",
+    "static/js/2.b701e161.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.36f81733.chunk.js"
+  ]
+}
