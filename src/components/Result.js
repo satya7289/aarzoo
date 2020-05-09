@@ -36,7 +36,7 @@ class Result extends React.Component {
               this.setState({
                 data:res.data.response.docs,
                 meta:res.data.response.meta,
-                facets:res.data.response.facets,
+                facets:res.data.response.facets.pub_year.terms,
                 loading:true
               })
             })
@@ -60,10 +60,9 @@ class Result extends React.Component {
                 <div className="fluid-container">
                     Here are your search results for "{search}" 
                     <ShowResult data={this.state.data}/> 
-
                     <Pagination postsPerPage={10} totalPosts={this.state.meta.hits} search={search} paginate={paginate}/>
+                    <Chart search={search} factes={this.state.facets}/>
 
-                    <Chart search={search} facets={this.state.facets.pub_year}/>
                 </div>
             )
         }

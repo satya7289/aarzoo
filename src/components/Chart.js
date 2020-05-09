@@ -9,40 +9,10 @@ class Chart extends PureComponent {
   
     render() {
         const {search,factes} = this.props;
-        const data = [
-            {
-              year: '2011', article: 4000,
-            },
-            {
-                year: '2012', article: 3000,
-            },
-            {
-                year: '2013', article: 2000,
-            },
-            {
-                year: '2014', article: 2780,
-            },
-            {
-                year: '2015', article: 1890,
-            },
-            {
-                year: '2016', article: 2390,
-            },
-            {
-                year: '2017', article: 3490,
-            },
-            {
-                year: '2018', article: 3490,
-            },
-            {
-                year: '2019', article: 3490,
-            },
-            {
-                year: '2020', article: 3490,
-            },
-          ];
+        const data = factes;
+        console.log(data);
         return (
-            <div style={{ width: '100%', height: 300 }} className="card-body bg-light mt-2">
+            <div style={{ width: '100%', height: 300 }} className="card-body bg-light mt-5 mb-5">
                 NUMBER OF ARTICLE PUBLISHED FOR "{search}"
                 <ResponsiveContainer>
                 <AreaChart
@@ -52,10 +22,10 @@ class Chart extends PureComponent {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="year" />
+                    <XAxis dataKey="term" />
                     <YAxis />
                     <Tooltip />
-                    <Area type="monotone" dataKey="article" stroke="#8884d8" fill="#8884d8" />
+                    <Area type="monotone" dataKey="count" stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
                 </ResponsiveContainer>
             </div>
