@@ -9,14 +9,16 @@ class Result extends React.Component {
         data:[],
         loading:false,
         meta: {},
-        facets:{}
+        facets:{},
+        page_no:0
     }
 
     componentDidUpdate(){
-        const {search, page} = this.props;
+        const {search} = this.props;
+        
         const API_URL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
         const PUBLIC_KEY = 'xrp7NPZMKRQ3U8nmHM5UMXu2XwBKYXei';
-        const query = API_URL + '?q=' + search + '&page=' + page +'&api-key=' + PUBLIC_KEY;
+ 
         if(!this.state.loading){
             
             axios.get(API_URL,{params:{
@@ -27,7 +29,7 @@ class Result extends React.Component {
                     'end_date':'20201212',
                     'facet_filter':true,
                     'facet':true,
-                    'page':page,
+                    'page':this.state.page_no,
                     'api-key':PUBLIC_KEY,
                 }
             })
@@ -46,12 +48,19 @@ class Result extends React.Component {
         }
     };
 
+    paginate =(n) =>{
+        console.log(n);
+        this.setState({
+            loading:false,
+            page_no:n
+        });
+    }
+
+
     render(){
         const { search, page } = this.props;
         const { data, loading, meta} = this.state;
-        const paginate = (number) =>{
-            console.log(number);
-        }
+        
         if(search==''){
             return null
         }
@@ -60,7 +69,7 @@ class Result extends React.Component {
                 <div className="fluid-container">
                     Here are your search results for "{search}" 
                     <ShowResult data={this.state.data}/> 
-                    <Pagination postsPerPage={10} totalPosts={this.state.meta.hits} search={search} paginate={paginate}/>
+                    <Pagination postsPerPage={10} totalPosts={this.state.meta.hits} search={search} paginate={this.paginate}/>
                     <Chart search={search} factes={this.state.facets}/>
 
                 </div>

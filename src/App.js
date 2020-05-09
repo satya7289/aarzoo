@@ -19,18 +19,6 @@ class App extends React.Component {
       offset: 0,
       time: 149
     },
-    factes:[
-      {count: 2645, term: "2012"},
-      {count: 2472, term: "2011"},
-      {count: 2391, term: "2013"},
-      {count: 2276, term: "2014"},
-      {count: 2022, term: "2015"},
-      {count: 1592, term: "2016"},
-      {count: 1283, term: "2017"},
-      {count: 1012, term: "2018"},
-      {count: 668, term: "2019"},
-      {count: 289, term: "2020"}
-    ],
   }  
 
   AddSearch =(s)=>{
@@ -53,8 +41,8 @@ class App extends React.Component {
         <Sidebar/>
         <div className="content">
           <Search AddSearch={this.AddSearch}/>
-          <Result search={this.state.search} page={this.state.page}/>
-
+          <Result search={this.state.search}/>
+         
         </div>
       </div>
     );

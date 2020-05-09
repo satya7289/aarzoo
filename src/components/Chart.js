@@ -25,7 +25,7 @@ class Chart extends PureComponent {
                     <XAxis dataKey="term" />
                     <YAxis />
                     <Tooltip />
-                    <Area type="monotone" dataKey="count" stroke="#8884d8" fill="#8884d8" />
+                    <Area type="monotone" dataKey="count" stroke="#8884d8" fill="rgb(189, 240, 227)" />
                 </AreaChart>
                 </ResponsiveContainer>
             </div>

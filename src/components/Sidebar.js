@@ -5,24 +5,25 @@ const Sidebar = () => {
 
   return (
     <div className="side-bar">
-        <nav>
-        <ul class="">
-            <li className="active">
-            
-            </li>
-            <li>
-                Article
-            </li>
-            <li>
-                Analytics
-            </li>
-            <li>
-                Message
-            </li>
-            <li>
-                Calander
-            </li>
-        </ul>
+        <nav className="ml-3 mt-3">
+            <a className="navbar-brand"><b>The New York Time</b></a>
+            <ul className="nav nav-pills flex-column">
+                <li className="nav-item">
+                    <a className="nav-link bg-transparent text-primary active">Dashboard</a>
+                </li>
+                <li>
+                <a className="nav-link bg-transparent">Article</a>
+                </li>
+                <li>
+                <a className="nav-link bg-transparent">Analytics</a>
+                </li>
+                <li>
+                <a className="nav-link bg-transparent">Message</a>
+                </li>
+                <li>
+                <a className="nav-link bg-transparent">Calander</a>
+                </li>
+            </ul>
         </nav>
     </div>
   );

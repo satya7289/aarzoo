@@ -45,7 +45,7 @@
 .side-bar {
   min-width: 250px;
   max-width: 250px;
-  background: blue;
+  background: rgb(246, 250, 249);
   color: rgba(20, 6, 6, 0.644);
   transition: all 0.3s;
 }
@@ -56,5 +56,8 @@
   transition: all 0.3s;
   overflow: hidden;
   width: 100%;
-  background: white;
+  background: rgb(250, 246, 246);
 }
+
+
+
