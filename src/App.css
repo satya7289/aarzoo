@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.side-bar {
+  min-width: 250px;
+  max-width: 250px;
+  background: blue;
+  color: rgba(20, 6, 6, 0.644);
+  transition: all 0.3s;
+}
+
+.content {
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+}
